@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2: Formularios</title>
+</head>
+<body>
+    <h3 align="center">Tienda de ropa online</h3>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Información del cliente</legend>
+            <table align="center">
+                <caption></caption>
+                <tbody >
+                    <tr>
+                        <td width="40%">
+                            <label for="nombre">Nombre:</label><br/>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
+                        </td>
+
+                        <td width="40%">
+                            <label for="paterno">Apellido Paterno:</label><br/>
+                            <input type="text" name="paterno" id="paterno" placeholder="Apellido Paterno" required/>
+                        </td>
+
+                        <td width="40%">
+                            <label for="materno">Apellido Materno:</label><br/>
+                            <input type="text" name="materno" id="materno" placeholder="Apellido Materno" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td width="40%">
+                            <label for="usuario">Nombre del usuario:</label><br/>
+                            <input type="usuario" name="usuario" id="usuario" placeholder="Usuario"/>
+                        </td>
+    
+                        <td width="40%">
+                            <label for="pass">Contraseña:</label><br/>
+                            <input type="text" name="pass" id="pass" placeholder="Password"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de Facturación</legend>
+            <table align="center">
+                <caption></caption>
+                <tbody>
+                    <tr>
+                        <td width="40%">
+                            <label for="calle">Calle:</label><br/>
+                            <input type="text" name="calle" id="calle" placeholder="Calle"/>
+                        </td>
+
+                        <td width="40%">
+                            <label for="num">Num:</label><br/>
+                            <input type="number" name="num" id="num" placeholder="Num. Exterior"/>
+                        </td>
+                        <td width="45%">
+                            <label for="colonia">Colonia:</label><br/>
+                            <input type="text" name="colonia" id="colonia" placeholder="Colonia"/>
+
+                        </td>
+                        
+
+                    </tr>
+
+                    <tr>
+                        <td width="40%">
+                            <label for="correo">E-mail:</label><br/>
+                            <input type="email" name="correo" id="correo" placeholder="E-mail"  required/>
+                        </td>
+
+                        <td width="40%">
+                            <label for="codigo">Código Postal:</label><br/>
+                            <input type="number" name="codigo" id="codigo" placeholder="C.P"/>
+                        </td>
+
+                        <td width="40%">
+                            <label for="rfc">RFC:</label><br/>
+                            <input type="text" name="rfc" id="rfc" placeholder="RFC" required/>
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%">
+                            <label for="fecha">Fecha de la venta</label>
+                            <input type="date" name="fecha" id="fecha"/>
+                        </td>
+                        
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos del articulo adquirido</legend>
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <td width="40%">
+                            <label for="tipo">Tipo</label><br/>
+                            <select size="5">
+                                <option>Vestido</option>
+                                <option>Falda</option>
+                                <option>Pantalón</option>
+                                <option>Playera</option>
+                                <option>Camisa</option>
+                            </select>
+                        </td>
+                        <td width="40%">
+                            <p>Talla</p>
+                            <input type="checkbox" name="chico" id="chico" value="chico"/>
+                            <label for="chico">Chico</label><br/>
+
+                            <input type="checkbox" name="mediano" id="mediano" value="mediano"/>
+                            <label for="mediano">Merdiano</label><br/>
+
+                            <input type="checkbox" name="grande" id="grande" value="grande"/>
+                            <label for="grande">Grande</label><br/>
+
+                            
+                        </td>
+                        <td width="40%">
+                            <label for="colores">Selecciona el Color</label><br/>
+                            <input type="color" name="colores" id="colores"/><br/><br/>
+
+                            <input type="submit" name="enviar" id="enviar" value="Enviar datos"/>
+                            <input type="reset" name="borrar" id="borrar" value="Borrar datos"/>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </fieldset>
+        <h4 align="right"> © Distribuidora de ropa en línea 2023</h4>
+    </form>
+
+</body>
+</html>
+
