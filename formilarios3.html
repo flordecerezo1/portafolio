@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3: Cinepolis Boletos</title>
+</head>
+<body>
+    <form action="" method="post" encyte="text/plain">
+        <label for="cine">Cines en San Luis Potosí</label>
+        <input type="text" name="cine" id="cine" list="cines" required/>
+        <datalist id="cines">
+            <option>Cinépolis Macro Plaza San Luis Potosí</option>
+            <option>Cinépolis Plaza Citadina San Luis</option>
+            <option>Cinépolis Plaza El Dorado</option>
+            <option>Cinépolis Plaza San Luis</option>
+            <option>Cinépolis Plaza Sendero</option>
+            <option>Cinépolis Tangamanga</option>
+            <option>Cinépolis VIP El Dorado SLP</option>
+            <option>Cinépolis VIP Plaza San Luis</option>           
+        </datalist><br/><br>
+
+        <fieldset>
+            <legend>Funciones</legend>
+
+                        <select size="15" required> 
+
+                            <optgroup label="Infantil">
+                                <option>Toy story 4</option>
+                                <option>Kung Fu Panda</option>
+                                <option>Barbie en un mundo de videojuegos</option>
+                            </optgroup>
+
+                            <optgroup label="Terror">
+                                <option>El conjuro 3</option>
+                                <option>El excorsista</option>
+                                <option>La monja</option>
+                            </optgroup>
+
+                            <optgroup label="Comedia">
+                                <option>Infelices para siempre</option>
+                                <option>Hombre al agua</option>
+                                <option>Son como niños 2</option>
+                                <option>Como caido del cielo</option>
+
+                            </optgroup>
+
+                            <optgroup label="Romance">
+                                <option>Your name</option>
+                                <option>A dos metros de ti</option>
+                                <option>Mujercitas</option>
+                                <option>Mi primer amor</option>
+                                <option>A todos los chicos de los que me enamore</option>
+                            </optgroup>
+                        </select>
+            <table>
+
+            </table>
+        </fieldset><br/>
+
+        <fieldset>
+            <legend>Boletos</legend>
+                <table align="center">
+
+                    <tr>
+                        <td width="45%">
+                            <label for="cantidad">Cantidad de boletos</label><br/>
+                            <input type="number" name="cantidad" id="cantidad" required/> 
+                        </td>
+
+                        <td width="45%">
+
+                            <p>Asiento</p>
+
+                            <label for="columna">Columna</label><br/>
+                            <input type="text" name="columna" id="columna" list="columnas" required/>
+                            <datalist id="columnas">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                                <option>F</option>
+                                <option>G</option>
+                                <option>H</option>
+                                <option>I</option>
+                                <option>J</option>
+                                <option>K</option>
+                                <option>L</option>
+                            </datalist><br/>
+
+                            <label for="fila">Fila</label><br/>
+                            <input type="number" name="fila" id="fila" list="filas" required/>
+                            <datalist id="filas">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                            </datalist>
+                        </td>
+                        <td width="45%">
+                            <p>Tipo</p><br/>
+                            <input type="radio" name="tipo" id="tipo" />
+                            <label for="tipo">Tradicional</label><br/>
+
+                            <input type="radio" name="tipo" id="tipo"/>
+                            <label for="tipo">3D</label><br/>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset><br/>
+
+        <fieldset>
+            <legend>Informacion Personal</legend>
+            <table align="center">
+                <tr>
+                    <td width="40%">
+                        <label for="nombre">Nombre</label><br/>
+                        <input type="text" name="nombre" id="name" placeholder="Nombre" required/>
+                    </td>
+
+                    <td width="40%">
+                        <label for="paterno">Apellido Paterno</label><br/>
+                        <input type="text" name="paterno" id="paterno" placeholder="Apellido Paterno" required/>
+                    </td>
+
+                    <td width="40%">
+                        <label for="materno">Apellido Materno</label><br/>
+                        <input type="text" name="materno" id="materno" placeholder="Apellido Materno" required/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td width="40%">
+                        <label for="correo">Correo Electronico</label><br/>
+                        <input type="email" name="correo" id="correo" placeholder="Correo Electronico" required/>
+                    </td>
+                    <td width="40%">
+                        <label for="tarjclub">Tarjeta Club Cinepolis</label><br/>
+                        <input type="number" name="tarjclub" id="tarjclub" placeholder="Tarjeta Club Cinepolis" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset><br/>
+
+        <fieldset>
+            <legend>Pago</legend>
+            <table>
+                <tr>
+                    <td width="40%">
+                        <p>Selecciona el metodo de pago</p><br/>
+
+                        <input type="radio" name="pago" id="pago"/>
+                        <label for="pago">Tarjeta de credito</label><br/>
+
+                        <input type="radio" name="pago" id="pago"/>
+                        <label for="pago">Tarjeta de debito</label><br/>
+
+                        <input type="radio" name="pago" id="pago"/>
+                        <label for="pago">Click to play</label><br/>
+
+                        <input type="radio" name="pago" id="pago"/>
+                        <label for="pago">Club Cinepolis</label><br/>
+
+                        <input type="radio" name="pago" id="pago"/>
+                        <label for="pago">Paypal</label><br/>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset><br/>
+
+        <input type="reset" name="borrar" id="borrar" value="Borrar datos"/>
+        <input type="submit" name="comprar" id="comprar" value="Comprar"/>
+        <br/><br/>
+
+
+    </form>
+    
+</body>
+</html>
