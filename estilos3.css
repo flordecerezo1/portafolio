@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(214, 255, 196);
+}
+#uno{
+   
+    background-color: rgb(214, 255, 196);
+}
+#dos{
+    background-color: rgb(214, 255, 196);
+}
+
+
+#titulo1{
+    color: rgb(160, 23, 126);
+    font-style: oblique;
+    size: 620px;
+    text-decoration: underline;
+
+}
+
+#titulo3{
+    color: rgb(160, 23, 126);
+    font-style: oblique;
+    size:620px;
+    text-decoration: underline;
+}
+
+.titulo2{
+    color:blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:italic;
+}
+
+#texto{
+    color:rgba(0, 189, 6, 0.83);
+    font-style: oblique;
+    font-size:larger;
+}
+
+#texto2{
+    color:rgba(0, 189, 6, 0.83);
+    font-style: italic;
+    font-size: larger
+}
+
+
+
+li{
+    text-align: left;
+}
