@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos4.css" />
+    <title>Práctica 5 Estilos-Formularios</title>
+</head>
+<body>
+    <h1>Servicios de Internet y Telefonía</h1>
+
+    <h2 id="titulo">Contrato de servicios</h2>
+
+    <form method="post" enctype="text/plain">
+
+        <fieldset>
+            <legend>Datos del cliente</legend>
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="nombre">Nombre:</label><br/>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>                    
+                    </td>
+    
+                    <td>
+                        <label for="paterno">Apellido paterno</label><br/>
+                        <input type="text" name="paterno" placeholder="Apellido paterno" required />
+                    </td>
+    
+                    <td>
+                        <label for="materno">Apellido materno:</label><br/>
+                        <input type="text" name="materno" id="materno" placeholder="Apellido materno" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="ciud">Ciudad</p>
+                        <select name="ciudad" size="4" >
+                            
+                            <option>San Luis Potosí</option>
+                            <option>Matehuala</option>
+                            <option>Cd. Valles</option>
+                            <option>Queretaro</option>
+                                                                 
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Servicios a contratar</legend>
+            <table>
+                <tr id="texto1">
+                    
+                    <td >
+                        <p>Selecciona el tipo de servicio a contratar</p>
+                    </td>
+                    
+                </tr>
+
+                <tr id="servicio">
+                    
+                    <td>
+                        <label for="telefono">Línea Telefónica</label>
+                        <input type="checkbox" name="telefono"  id="telefono" checked/>
+                    </td>
+
+                    <td>
+                        <label for="internet">Servicio de Internet</label>
+                        <input type="checkbox" name="internet" id="internet" checked/>
+                    </td>
+                </tr>
+           </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Forma de pago</legend>
+            <table>
+
+                <tr>
+                    <td >
+                        <p>Elige la forma de pago:</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago"/>
+                        <lable for="pago">TDC</lable>
+                    </td>   
+                </tr>
+
+                <tr>
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago" checked/>
+                        <lable for="pago">Tarjeta Débito</lable>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago"/>
+                        <lable for="pago">Pago en Efectivo</lable>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago"/>
+                        <lable for="pago">Pago mediante Cheque</lable>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago"/>
+                        <lable for="pago">Transferencia bancaria</lable>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago"/>
+                        <lable for="pago">Depósito bancario</lable>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="formasp">
+                        <input type="radio" name="pago" id="pago"/>
+                        <lable for="pago">Pago en Oxxo</lable>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="formasp">
+                        
+                        <input type="submit" name="enviar" id="enviar" value="Enviar datos"/>
+                        <input type="reset" name="borrar" id="borrar" value="Borrar datos"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+    </form>
+
+    <h2 id="titulo2">Práctica 5</h2>
+    <h3>HTML5 - CSS</h3>
+    <h3>Primavera 2023</h3>
+</body>
+</html>

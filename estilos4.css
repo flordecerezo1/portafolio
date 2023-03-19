@@ -1,0 +1,69 @@
+body{
+    background-color:dimgrey;
+}
+
+h1{
+    color:darkgray ;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#titulo{
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+table{
+    width: 75%;
+    text-align: center;
+}
+
+
+td{
+    vertical-align: middle;
+    width: 25%;
+
+}
+
+p{
+    text-align: left;
+    color:white;
+}
+
+#ciud{
+    text-align: center;
+    color: white;
+}
+
+#servicio{
+    
+    color: white;
+}
+
+#texto1{
+    text-align: left;
+}
+
+legend{
+    color:white;
+}
+
+#titulo2{
+    color:white;
+    text-align: center;
+    f
+}
+
+h3{
+    color: white;
+    text-align: center;
+}
+
+label{
+    color: white;
+}
+
+.formasp{
+    text-align: left;
+}
