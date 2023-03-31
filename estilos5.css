@@ -1,0 +1,35 @@
+div{
+    display:block;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    margin: 15px auto;
+    background: #96ff98;
+}
+.texto{
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+
+}
+
+div:hover{
+
+    background: #ffc4fb;
+
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+
+    -moz-transform: skew(20deg);
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+
+}
+
+div:active{   
+    background-color:#96afff;
+    box-shadow: rgb(106, 233, 255) 10px 15px 15px ;
+
+}
