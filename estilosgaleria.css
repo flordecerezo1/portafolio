@@ -1,0 +1,32 @@
+body{
+    width: 100%;
+}
+
+div{
+    width: 45%;
+    margin: 5px;
+}
+
+#imagenes{
+    display: block;
+    width:  45%;
+    text-align: left;
+    float: left;
+}
+#videos{
+    display: block;
+    width: 45%;
+    text-align:right;
+    float: right;
+}
+
+img{
+    width: 100%;
+}
+
+iframe{
+    width: 100%;
+}
+
+
+
