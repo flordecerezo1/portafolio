@@ -1,0 +1,65 @@
+*{
+    color: rgb(255, 255, 255);
+}
+
+#cajaformulario{
+    background-color: #000000;
+    float: left;
+    padding: 20px;
+    border: 1px solid #ff89ed;
+}
+#cajadatos{
+    float: left;
+    width: 400px;
+    margin-left: 20px;
+    padding: 20px;
+    border: 1px solid #ffbce2;
+}
+#anime, #opinion{
+    width: 200px;
+    color: #ff009d;
+}
+#cajadatos > div{
+    padding: 5px;
+    border-bottom: 1px solid #ff65f0;
+}
+textarea, select{
+    background-color: #ffeaf8;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ffcaf6;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text], select {
+    background-color: #ffeaf8;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ffcaf6;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #ff1893;
+}
+#guardar{
+    background-color: #ff3cbe;
+    border: #ff65f0;
+}
+#eliminar{
+    background-color: #ff3cbe;
+    border: #ff65f0;
+}
