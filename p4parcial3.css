@@ -1,0 +1,14 @@
+form{
+    margin: 2%;
+    align-content: center;
+}
+
+input{
+    width: 250px;
+}
+
+#boton{
+    color: white;
+    background-color: dodgerblue;
+    width: 260px;
+}
