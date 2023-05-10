@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Geolocation API</title>
+    <style>
+
+        h1{
+            text-align: center ;
+            position: absolute;
+            top: -4%;
+            left: 48%;
+        }
+        button{
+            position: absolute;
+            top: 75%;
+            left: 38%;
+        }
+        #demo{
+            position: absolute;
+            top: 80%;
+            left: 38%;
+        }
+
+        #lugares{
+            position: absolute;
+            top: 15%;
+            left: 10%;
+        }
+        #actividades{
+            position: absolute;
+            top: 15%;
+            left: 61%;
+        }
+        #compras{
+            position: absolute;
+            top: 25%;
+            left: 76%;
+        }
+    </style>
+</head>
+
+<body background="notaviaje.png" style="background-attachment: fixed; 
+    background-size: 90%; background-repeat: no-repeat; background-position: center;">
+    <h1 align="center">Lista de viaje</h1>
+
+
+    <button onclick="getLocation()">Mi Ubicacion</button>
+
+    <p id="demo"></p>
+
+    <br/><textarea name="text" id="lugares"></textarea>
+    <br/><textarea name="text" id="actividades"></textarea>
+    <br/><textarea name="text" id="compras"></textarea>
+
+    <script>
+    const x = document.getElementById("demo");
+
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+</body>
+</html>
