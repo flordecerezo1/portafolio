@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+</head>
+<script>
+var total;
+function califica() //Funcion encargada de revisar si las respuestas estan bien
+    {var total=0; //contador de puntos
+    	for (var x=1;x<=5;x++) //ciclo que recorre las 5 preguntas
+    	{
+        var res=0;
+        var nom="r"+x; //variable que checara el radio de la pregunta
+        var resul=document.getElementsByName(nom); 
+        for(var i=0;i<resul.length;i++) //ciclo que recorrera las respuestas
+        {
+            if(resul[i].checked==true) //ciclo que comprobara la respuesta
+                res=parseInt(resul[i].value); // se guarda el puntaje
+        }
+        total=total+res; //se suma el puntaje
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";  // se imprimen los resultados, y con ellos un mensaje
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Encuesta sobre dragon ball</h2>
+	<h2>Tu opinión es importante</h2>
+<form>
+<div>
+	
+	<ul>
+
+		<li>¿Cual de estos saijayin se llamaba Kakaroto?</li> 
+		<input type="radio" name="r1" id="r1" value="5"/>Goku<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Vegeta<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Napa<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Raditz<br/><br/>
+		
+		<li>¿En cual saga Goku se convierte en super saiyajin 1?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>La saga de los saijayin<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>La saga de freezer<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>La saga de cel<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>La saga de majin boo<br/><br/>
+		
+
+		<li>¿Como se llama el hijo de vegeta?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Vegeta<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Goten<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Trunks<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Gohan<br/><br/>
+
+        <li>¿Cual es el nombre de la esposa de Goku?</li>
+		<input type="radio" name="r4" id="r4" value="5"/>Milk<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Bulma<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Videl<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Maron<br/><br/>
+
+		<li>¿En que saga aparece Mr. Satan por primera vez?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>La saga de los saijayin<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>La saga de freezer<br/>
+		<input type="radio" name="r5" id="r5" value="5"/>La saga de cel<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>La saga de majin boo<br/><br/>
+
+		<li>¿En que se animal se convierten los saijayin cuando ven la luna llena ?</li>
+		<input type="radio" name="r6" id="r6" value="5"/>En un simio gigante<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>En un oso giganter<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>En un tigre gigante<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>En un dinosaurio gigante<br/><br/>
+
+	</ul>
+	
+</div>
+
+<input type="button" value="Calificar" onclick="califica()">
+
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
