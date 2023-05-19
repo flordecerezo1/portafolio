@@ -1,0 +1,31 @@
+h1{
+    font-family: 'PT Serif', serif;
+    color: dodgerblue;
+    text-align: center;
+}
+form{
+    width: 100%;
+    text-align: center;
+}
+
+label{
+    padding: 1%;
+    width:80%;
+    font-family: 'Satisfy', cursive;
+
+}
+input{
+    width: 40%;
+    padding: 1%;
+}
+#boton{
+    padding: 1%;
+    border: none;
+    background-color: #87c7ffab;
+    width: 40%;
+    text-size-adjust: 100%;
+}
+img{
+    width: 40%;
+    align-content: center;
+}
