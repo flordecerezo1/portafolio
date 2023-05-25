@@ -1,0 +1,15 @@
+#formularios{
+    align-content: center;
+    width: 100%;
+    margin: 5%;
+}
+
+.formulario{
+    width: 90%;
+    background-color: hotpink;
+    border: hotpink;
+    color:rgb(255, 255, 255);
+    text-size-adjust: 50%;
+    padding: 2%;
+    margin: 2%;
+}
