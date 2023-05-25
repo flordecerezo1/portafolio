@@ -23,24 +23,27 @@ table{
 .bienvenido{
     width: 33.3%;
     text-align: center;
+    
    
 }
 
 #tablabarra{
-    width:100%
+    width:100%;
+    align:center;
 }
+
 
 a{
     text-decoration: none;
+    font-family: 'Lobster', cursive;
 }
 .barra{
-    width: 12%;
+    width: 15%;
     font-size: 100%;
     border:1px;
     border-color: #ff00a6;
     border-style: solid;   
     text-align: center;
-    
 }
 
 #tablainicio{
@@ -91,7 +94,7 @@ a{
 }
 
 td.textoanime{
-    width: 65%;
+    width: 60%;
     padding: 3%;
 }
 
@@ -110,3 +113,4 @@ td.textoanime{
 footer{
     background-color:  #ff00a6;
 }
+

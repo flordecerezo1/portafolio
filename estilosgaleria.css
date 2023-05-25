@@ -1,21 +1,37 @@
+*{
+    color: white;
+}
 body{
-    width: 100%;
+    background-color: black;
+
+    margin: 50px;
 }
 
 div{
-    width: 45%;
-    margin: 5px;
+    width: 40%;
+    margin: 1%;
 }
 
-#imagenes{
-    display: block;
-    width:  45%;
-    text-align: left;
-    float: left;
+.imagenes{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+}
+.imagenes>div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic/cubic-bezier(.25,.4,.45,1.4);
+
+}
+.imagenes>div:hover{
+    flex:5;
 }
 #videos{
     display: block;
-    width: 45%;
+    width: 40%;
     text-align:right;
     float: right;
 }

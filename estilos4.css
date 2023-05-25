@@ -1,69 +1,36 @@
-body{
-    background-color:dimgrey;
+#encabezado1{
+    display:block;
+    width: 400px;
+    padding: 20px;
+    border:1px solid #124713;
+    text-align: center;
+    margin: 15px auto;
+    background: #dcfcda;
+
+    /*sup izq,sup der,inf der,inf izq*/
+    -moz-border-radius: 20px 10px 30px 40px;
+    -webkit-border-radius: 20px 10px 30px 40px;
+    border-radius: 20px 10px 30px 40px;
+
+
+    -moz-box-shadow:rgb(106, 233, 255) 10px 15px 15px inset;
+    -webkit-box-shadow:rgb(106, 233, 255) 10px 15px 15px inset;
+    box-shadow: rgb(106, 233, 255) 10px 15px 15px inset;
+
+
+}
+#titulo1{
+    color: rgb(0, 78, 194);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+
+    text-shadow: rgb(40, 230, 255) 4px 4px 1px;
 }
 
-h1{
-    color:darkgray ;
+#titulo1{
+    color: rgb(111, 255, 130);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-}
+    font-size: larger;
 
-#titulo{
-    color:white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-}
-
-table{
-    width: 75%;
-    text-align: center;
-}
-
-
-td{
-    vertical-align: middle;
-    width: 25%;
-
-}
-
-p{
-    text-align: left;
-    color:white;
-}
-
-#ciud{
-    text-align: center;
-    color: white;
-}
-
-#servicio{
-    
-    color: white;
-}
-
-#texto1{
-    text-align: left;
-}
-
-legend{
-    color:white;
-}
-
-#titulo2{
-    color:white;
-    text-align: center;
-    f
-}
-
-h3{
-    color: white;
-    text-align: center;
-}
-
-label{
-    color: white;
-}
-
-.formasp{
-    text-align: left;
+    text-shadow: rgb(105, 238, 255) 4px 4px 1px;
 }

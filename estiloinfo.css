@@ -1,0 +1,28 @@
+#tituloanime{
+    width: 100%;
+    text-align: center;
+}
+
+.contenedoranime{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+.barraanime{
+    width: 20%;
+    padding: 2%;
+}
+
+.info{
+    width:100%;
+    text-align: justify;
+}
+#cont{
+    text-align: center;
+    color: hotpink;
+}
+.contededorinfo{
+    width: 100%;
+    padding: 10%;
+    margin: 15%;
+}
