@@ -5,29 +5,30 @@
 #cajaformulario{
     background-color: #000000;
     float: left;
-    padding: 20px;
+    padding: 2%;
     border: 1px solid #ff89ed;
+    width: 40%;
 }
 #cajadatos{
     float: left;
-    width: 400px;
-    margin-left: 20px;
-    padding: 20px;
+    width: 48%;
+    margin-left: 1%;
+    padding: 3%;
     border: 1px solid #ffbce2;
 }
 #anime, #opinion{
-    width: 200px;
+    width: 100%;
     color: #ff009d;
 }
 #cajadatos > div{
-    padding: 5px;
+    padding: 2%;
     border-bottom: 1px solid #ff65f0;
 }
 textarea, select{
     background-color: #ffeaf8;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 2% 3%;
+    margin: 4% 0%;
     display: inline-block;
     border: 1px solid #ffcaf6;
     border-radius: 4px;
@@ -36,8 +37,8 @@ textarea, select{
 input[type=text], select {
     background-color: #ffeaf8;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 2% 3%;
+    margin: 4% 0%;
     display: inline-block;
     border: 1px solid #ffcaf6;
     border-radius: 4px;
@@ -46,8 +47,8 @@ input[type=text], select {
 input[type=submit] {
     width: 100%;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 5% 6%;
+    margin: 4% 0%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -62,4 +63,14 @@ input[type=submit]:hover {
 #eliminar{
     background-color: #ff3cbe;
     border: #ff65f0;
+}
+#titulo1{
+    background-color: #ff3cbe;
+    text-align: center;
+    width: 100%;
+}
+
+#redessociales{
+    margin-top: 55%;
+    width: 50%;
 }

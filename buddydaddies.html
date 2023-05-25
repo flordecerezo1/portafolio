@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="estiloproyecto.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="blog.css">
-    <script src="blog.js"></script>
+    <link rel="stylesheet" href="estiloproyecto.css" />
+    <link rel="stylesheet" href="estiloinfo.css" />
+    <title></title>
 </head>
 <body>
     <nav>
         <table id="tablabienvenido" aling="center">
             <tr>
                 <td class="bienvenido">
-                    <img src="imagenes/kimetsu no yaiba/kny1.jpg" width="80%">
+                    <img src="imagenes/" width="80%">
                 </td>
     
                 <td class="bienvenido">
-                    <img src="imagenes/hanako/hanako1.png" width="80%">
+                    <img src="imagenes" width="80%">
                 </td>
     
                 <td class="bienvenido">
-                    <img src="imagenes/spy family/spyxfamily.jpg" width="80%">
+                    <img src="imagenes/" width="80%">
     
                 </td>
             </tr>
@@ -62,39 +61,28 @@
         
         
     </nav>
-    <h2 id="titulo1">Opiniones y recomendaciones</h2>
-    <section id="cajaformulario">
-        <form name="formulario">
-            <p>Anime: <br><input type="text" name="anime" id="anime"></p>
-            <p>Opinion: <br><textarea name="text" id="opinion"></textarea></p>
-            <p><input type="button" name="guardar" id="guardar" value="Guardar Comentarios"></p>
-            <p><input type="button" name="eliminar" id="eliminar"
-            value="Eliminar Comentarios" onclick="elimina()"></p>
-        </form>
-    </section>
+    
 
-    <section id="cajadatos">
-    </section><br/><br/>
-    <script>
-        window.addEventListener('mouseover', initLandbot, { once: true });
-        window.addEventListener('touchstart', initLandbot, { once: true });
-        var myLandbot;
-        function initLandbot() {
-          if (!myLandbot) {
-            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
-            s.addEventListener('load', function() {
-              var myLandbot = new Landbot.Livechat({
-                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1608528-PD342IGTG4RGO3K2/index.json',
-              });
-            });
-            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-          }
-        }
-        </script>
+        <h1 id="tituloanime">Kimetsu No Yaiba</h1>
+        
+        <div class="contenedorinfo">
+            
+            <p class="info">
 
-</body><br/>
+            </p>
+            
+                <img src="imagenes/" class="barraanime"/>
+                <img src="imagenes/" class="barraanime"/>
+                <img src="imagenes/" class="barraanime"/>
+                <img src="imagenes/" class="barraanime"/>
+
+            <h2 id="cont">contenido</h2>
+            <p class="info">
+                
+            </p>
+
+        </div>
+        
 <footer>
     <table id="redessociales" align="center">
         <tr><td colspan="4">Redes sociales</td></tr>
