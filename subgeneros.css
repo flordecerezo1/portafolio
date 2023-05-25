@@ -1,0 +1,44 @@
+#romances{
+    width:100%;
+    padding-bottom: 5%;
+    padding-left: 2%
+
+}
+.romance{
+    padding: .25%;
+    width: 15%;
+}
+
+.romance:hover{
+    width: 18%;
+}
+
+#genaccion{
+    width:100%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+}
+
+.accion{
+    padding: .25%;
+    width: 15%;
+}
+
+.accion:hover{
+    width: 18%;
+}
+
+#genero2{
+    width:100%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+}
+
+.generos2{
+    padding: .25%;
+    width: 15%;
+}
+
+.generos2:hover{
+    width: 18%;
+}
