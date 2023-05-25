@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloproyecto.css" />
+    <link rel="stylesheet" href="trivia.css" />
+    <title>Trivia de Dragon Ball</title>
+    <script type="text/javascript" src="pdf/jspdf.js"></script>
+	<script type="text/javascript" src="pdf/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="pdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="pdf/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="pdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="pdf/jspdf.plugin.from_html.js"></script>
+	<script type="text/javascript" src="pdf/jspdf.plugin.split_text_to_size.js"></script>
+</head>
+<script>
+	var total;
+	function califica() //Funcion encargada de revisar si las respuestas estan bien
+		{var total=0; //contador de puntos
+			for (var x=1;x<=20;x++) //ciclo que recorre las 5 preguntas
+			{
+			var res=0;
+			var nom="r"+x; //variable que checara el radio de la pregunta
+			var resul=document.getElementsByName(nom); 
+			for(var i=0;i<resul.length;i++) //ciclo que recorrera las respuestas
+			{
+				if(resul[i].checked==true) //ciclo que comprobara la respuesta
+					res=parseInt(resul[i].value); // se guarda el puntaje
+			}
+			total=total+res; //se suma el puntaje
+			document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";  // se imprimen los resultados, y con ellos un mensaje
+			}
+			if(total==100)
+				document.getElementById("comentario").innerHTML="Excelente, eres un saiyajin de raza pura!!";
+			else
+				if(total>=75)
+				document.getElementById("comentario").innerHTML="Muy bien, eres un saiyajin de clase media!!";
+			else
+				if(total>=50)
+				document.getElementById("comentario").innerHTML="Eres un saiyajin de clase baja!!";
+                else
+				if(total<50)
+				document.getElementById("comentario").innerHTML="Eres una desgracia para la raza saiyajin!!";
+            
+		}
+	
+	function generar(){
+		var doc= new jsPDF();
+		//DEFINI TAMAÑO DE LA LETRA
+		doc.setFontSize(40);
+		//color del texto
+		doc.setTextColor(9, 7, 121);
+		//define a que elemento se le agrara el estilo junto a las cooredenadas
+		doc.text(40, 20, "Encuesta de Dragon ball");
+		doc.setTextColor(17, 122, 209);
+		doc.setFontSize(30);
+		doc.text(50, 35, "Veamos que tan experto eres");
+		doc.setTextColor(0,0,0);
+		doc.setFontSize(20);
+		doc.text(20, 50, "100 puntos. Excelente, eres un saiyajin de raza pura!! \r Todas tus respuestas son correctas");
+		doc.text(20, 70, "75 puntos. Muy bien, eres un saiyajin de clase media!! \r Obtuviste 3 respuestas son correctas");
+		doc.text(20, 90, "50 puntos. Eres un saiyajin de clase baja!! \r Obtuviste 2 respuestas son correctas");
+		doc.text(20, 110, "0 puntos. Eres una desgracia para la raza saiyajin!!. \r odas tus respuestas son incorrectas");
+	   
+		var string = doc.output('datauristring');
+		$('iframe').attr('src', string);
+	}
+	
+</script>
+<body>
+
+    <nav>
+        <table id="tablabienvenido" aling="center">
+            <tr>
+                <td class="bienvenido">
+                    <img src="imagenes/kimetsu no yaiba/kny1.jpg" width="80%">
+                </td>
+    
+                <td class="bienvenido">
+                    <img src="imagenes/hanako/hanako1.png" width="80%">
+                </td>
+    
+                <td class="bienvenido">
+                    <img src="imagenes/spy family/spyxfamily.jpg" width="80%">
+    
+                </td>
+            </tr>
+    
+        </table><br/>
+        <table id="tablabarra" align="center">
+            <tr>
+                <td class="barra"><a href="animejoho.html">Inicio</a></td>
+                <td class="barra">
+                    <div class="generos">
+                        <a href="genanimejoho.html">Generos</a>
+                        <div class="listageneros">
+                            <table width="100%">
+
+                                <tr><td><a href="shounen.html">Shounen</td></a></tr>
+                                <tr><td><a href="shoujo.html">Shoujo</td></a></tr>
+                                <tr><td><a href="seinen.html">Seinen</td></a></tr>
+                                <tr><td><a href="josei.html">Josei</td></a></tr>
+                                <tr><td><a href="kodomo.html">Kodomo</a></td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+    
+                <td class="barra"><a href="estrenosanimejoho.html">Estrenos</a></td>
+    
+                <td class="barra"><a href="bloganimejoho.html">Blog</a></td>
+    
+                <td class="barra"><a href="cuestionarioanimejoho.html">Cuestionario (Trivia)</a></td>
+    
+                <td class="barra"><a href="ayudaanimejoho.html">Ayuda</a></td>
+    
+                <td class="barra"><a href="galeriaanimejoho.html">Galeria Anime</a></td>
+                
+            </tr>
+        </table><br/><br/>
+        
+        
+    </nav>
+
+    <div id="contiene">
+        <h1>Responde la encuesta</h1>
+        <h2>Encuesta sobre dragon ball z</h2>
+        <h2>Veamos que tan experto eres</h2>
+    <form>
+        <div>
+            
+            <ul>
+
+                <li>¿Cual de estos saijayin se llamaba Kakaroto?</li> 
+                <input type="radio" name="r1" id="r1" value="5"/>Goku<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>Vegeta<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>Napa<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>Raditz<br/><br/>
+                
+                <li>¿En cual saga Goku se convierte en super saiyajin 1?</li>
+                <input type="radio" name="r2" id="r2" value="0"/>La saga de los saijayin<br/>
+                <input type="radio" name="r2" id="r2" value="5"/>La saga de freezer<br/>
+                <input type="radio" name="r2" id="r2" value="0"/>La saga de cel<br/>
+                <input type="radio" name="r2" id="r2" value="0"/>La saga de majin boo<br/><br/>
+                
+
+                <li>¿Como se llama el hijo de vegeta?</li>
+                <input type="radio" name="r3" id="r3" value="0"/>Vegeta<br/>
+                <input type="radio" name="r3" id="r3" value="0"/>Goten<br/>
+                <input type="radio" name="r3" id="r3" value="5"/>Trunks<br/>
+                <input type="radio" name="r3" id="r3" value="0"/>Gohan<br/><br/>
+
+                <li>¿Cual es el nombre de la esposa de Goku?</li>
+                <input type="radio" name="r4" id="r4" value="5"/>Milk<br/>
+                <input type="radio" name="r4" id="r4" value="0"/>Bulma<br/>
+                <input type="radio" name="r4" id="r4" value="0"/>Videl<br/>
+                <input type="radio" name="r4" id="r4" value="0"/>Maron<br/><br/>
+
+                <li>¿En que saga aparece Mr. Satan por primera vez?</li>
+                <input type="radio" name="r5" id="r5" value="0"/>La saga de los saijayin<br/>
+                <input type="radio" name="r5" id="r5" value="0"/>La saga de freezer<br/>
+                <input type="radio" name="r5" id="r5" value="5"/>La saga de cel<br/>
+                <input type="radio" name="r5" id="r5" value="0"/>La saga de majin boo<br/><br/>
+
+                <li>¿En que se animal se convierten los saijayin cuando ven la luna llena ?</li>
+                <input type="radio" name="r6" id="r6" value="5"/>En un simio gigante<br/>
+                <input type="radio" name="r6" id="r6" value="0"/>En un oso giganter<br/>
+                <input type="radio" name="r6" id="r6" value="0"/>En un tigre gigante<br/>
+                <input type="radio" name="r6" id="r6" value="0"/>En un dinosaurio gigante<br/><br/>
+
+                <li>¿Quien es el creador de dragon ball?</li>
+                <input type="radio" name="r7" id="r7" value="0"/>Eiichiro Oda<br/>
+                <input type="radio" name="r7" id="r7" value="0"/>Hajime Isayama<br/>
+                <input type="radio" name="r7" id="r7" value="5"/>Akira Toriyama<br/>
+                <input type="radio" name="r7" id="r7" value="0"/>Naoto Takeuchi<br/><br/>
+
+                <li>¿Que dia llegaban los Androides a la tierra segun Trunks del futuro ?</li>
+                <input type="radio" name="r8" id="r8" value="0"/>12 de septiembre<br/>
+                <input type="radio" name="r8" id="r8" value="0"/>5 de julio<br/>
+                <input type="radio" name="r8" id="r8" value="0"/>20 de mayo<br/>
+                <input type="radio" name="r8" id="r8" value="5"/>12 de mayo<br/><br/>
+
+                <li>¿Cual es la habilidad de Ginyu?</li>
+                <input type="radio" name="r9" id="r9" value="0"/>Fusionarse<br/>
+                <input type="radio" name="r9" id="r9" value="0"/>Cambiar de mente<br/>
+                <input type="radio" name="r9" id="r9" value="5"/>Cambiar de cuerpo<br/>
+                <input type="radio" name="r9" id="r9" value="0"/>Cambiar habiliddes<br/><br/>
+
+                <li>¿Cuantos Cell  juniors tuvo Cell ?</li>
+                <input type="radio" name="r10" id="r10" value="5"/>7<br/>
+                <input type="radio" name="r10" id="r10" value="0"/>11<br/>
+                <input type="radio" name="r10" id="r10" value="0"/>4<br/>
+                <input type="radio" name="r10" id="r10" value="0"/>13<br/><br/>
+
+                <li>¿Como se llama la rencarnacion de Majin Buu?</li> 
+                <input type="radio" name="r11" id="r11" value="0"/>Majin Vegeta<br/>
+                <input type="radio" name="r11" id="r11" value="5"/>Uub<br/>
+                <input type="radio" name="r11" id="r11" value="0"/>Super Bu<br/>
+                <input type="radio" name="r11" id="r11" value="0"/>No reencarno<br/><br/>
+                
+                <li>¿Como se llama el "Rey Juez" encargado del otro mundo?</li>
+                <input type="radio" name="r12" id="r12" value="0"/>Dabura<br/>
+                <input type="radio" name="r12" id="r12" value="0"/>Kamisama<br/>
+                <input type="radio" name="r12" id="r12" value="5"/>Enma<br/>
+                <input type="radio" name="r12" id="r12" value="0"/>Sanma<br/><br/>
+                
+
+                <li>¿Que tecnica invento el Maestro Roshi?</li>
+                <input type="radio" name="r13" id="r13" value="5"/>Kame Hame Ha<br/>
+                <input type="radio" name="r13" id="r13" value="0"/>Kienzan<br/>
+                <input type="radio" name="r13" id="r13" value="0"/>Puño del dragon<br/>
+                <input type="radio" name="r13" id="r13" value="0"/>Makankosapo<br/><br/>
+
+                <li>¿Cual es el nombre del Dragon de Namek?</li>
+                <input type="radio" name="r14" id="r14" value="0"/>Shenlong<br/>
+                <input type="radio" name="r14" id="r14" value="5"/>Porunga<br/>
+                <input type="radio" name="r14" id="r14" value="0"/>Sheikong<br/>
+                <input type="radio" name="r14" id="r14" value="0"/>Rengok<br/><br/>
+
+                <li>¿De que personaje no tenia celulas Cell?</li>
+                <input type="radio" name="r15" id="r15" value="0"/>Goku<br/>
+                <input type="radio" name="r15" id="r15" value="0"/>Vegeta<br/>
+                <input type="radio" name="r15" id="r15" value="5"/>Trunks<br/>
+                <input type="radio" name="r15" id="r15" value="0"/>Piccolo<br/><br/>
+
+                <li>¿A cual Kaio absorbio Majin Bo?</li>
+                <input type="radio" name="r16" id="r16" value="5"/>Gran Kaio-Shin<br/>
+                <input type="radio" name="r16" id="r16" value="0"/>Kaio-Shin del Sur<br/>
+                <input type="radio" name="r16" id="r16" value="0"/>Kaiosama<br/>
+                <input type="radio" name="r16" id="r16" value="0"/>Kaio-Shin del Norte<br/><br/>
+
+                <li>¿Que tecnicas le enseño Kaiosama a Goku?</li>
+                <input type="radio" name="r17" id="r17" value="0"/>Teletransportacion<br/>
+                <input type="radio" name="r17" id="r17" value="0"/>Kaioken y Kienzan<br/>
+                <input type="radio" name="r17" id="r17" value="5"/>Kaioken y Genkidama<br/>
+                <input type="radio" name="r17" id="r17" value="0"/>Puño del dragon<br/><br/>
+
+                <li>¿De cuanto era el poder de Gohan que midio Raditz ?</li>
+                <input type="radio" name="r18" id="r18" value="0"/>1210<br/>
+                <input type="radio" name="r18" id="r18" value="0"/>1507<br/>
+                <input type="radio" name="r18" id="r18" value="0"/>10503<br/>
+                <input type="radio" name="r18" id="r18" value="5"/>1307<br/><br/>
+
+                <li>¿Como se recupero Krilin del ataque de Frezzer?</li>
+                <input type="radio" name="r19" id="r19" value="0"/>Esferas del Dragon<br/>
+                <input type="radio" name="r19" id="r19" value="0"/>Lo cura Kamisama<br/>
+                <input type="radio" name="r19" id="r19" value="5"/>Lo cura dende<br/>
+                <input type="radio" name="r19" id="r19" value="0"/>Semillas del ermitaño<br/><br/>
+
+                <li>¿Completa la frase: "Soy un Saiyajin......</li>
+                <input type="radio" name="r20" id="r20" value="0"/>vengador y juro que te exterminare"<br/>
+                <input type="radio" name="r20" id="r20" value="5"/>criado en la tierra y juro que te exterminare"<br/>
+                <input type="radio" name="r20" id="r20" value="0"/>que lucha por la justicia y juro que te exterminare"<br/>
+                <input type="radio" name="r20" id="r20" value="0"/>de clase alta y juro que te exterminare"<br/><br/>
+                
+
+            </ul>
+            
+        </div>
+
+        <input type="button" value="Calificar" onclick="califica()" >
+        <input type="button" onclick="generar()" value="Generar PDF" /><br/>
+    </form>
+    <p></p>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    <iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
