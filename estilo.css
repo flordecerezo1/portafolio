@@ -1,0 +1,42 @@
+*{
+    margin: 1%;
+    background-color:antiquewhite
+    align-content: center;
+}
+body{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(255, 0, 170);
+}
+
+hr{
+    border-color: rgba(10, 178, 255, 0.604);
+    border-width: 10%;
+}
+h2{
+    text-align: center;
+    color: rgb(38, 0, 255);
+}
+h3{
+    text-align: center;
+    color: mediumorchid;
+    font-family: 'Lilita One', cursive;
+}
+
+.icono{
+    width:30%;
+    align-items: center;
+}
+.archivo1{
+    width: 15%;
+}
+
+#parcial1{
+    width: 80%;
+}
+td{
+    padding: 5%;
+}
